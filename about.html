@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Me</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS (ikut projek awak) -->
+  <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="top-nav">
+  <a href="index4.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="education.html">Education</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- Hero / Header About -->
+<header class="custom-header" style="text-align:center;">
+  <div class="header-wrapper">
+
+    <div class="header-left" style="margin:auto;">
+      <h1 style="font-size: 60px;">About Me</h1>
+      <marquee><p>All you want to know about me and things that i like.</p></marquee> 
+    </div>
+
+  </div>
+</header>
+
+
+<!-- Main Content -->
+ <main>
+
+ <!-- PROFILE SECTION -->
+<section id="profile" class="section">
+<div class="profile-section" style="text-align:center;">
+  <h2>Profile</h2>
+  <a href="image/pincess.jpeg" target="_blank">
+  <img src="image/pincess.jpeg" alt="My Photo">
+  </a>
+  <h2>Ain Asyikin Binti Anuar</h2>
+
+  <!-- TAMBAH / UBAH BAHAGIAN INI -->
+  <div class="profile-info">
+    <p><span class="label">From:</span><span class="value">Banting, Selangor.</span></p>
+    <p><span class="label">Age:</span><span class="value">20 years</span></p>
+    <p><span class="label">Date of birth:</span><span class="value">28<sup>th</sup> July 2005</span></p>
+    <p><span class="label">Race:</span><span class="value">Malay</span></p>
+    <p><span class="label">Language known:</span><span class="value">Malay, English</span></p>
+  </div>
+  <br>
+  <br>
+  <p>My name is Ain Asyikin Binti Anuar. Some people call me Ain or Cikin.I am someone who enjoys simple things in life, especially things that make me happy and comfortable. Purple is my favorite color because it gives a calm and aesthetic vibe that represents my personality. I also love delicious food, as I believe good food can always improve my mood and make moments more enjoyable. Through my interests and preferences, I hope people can get to know me better and understand a little about who I am.</p>
+</div>
+</section>
+
+ <!-- HOBBY SECTION -->
+<section id="hobby" class="section">
+  <h2>My Hobby</h2>
+
+  <div class="hobby-box">
+    <a href="image/game2.jpg" target="_blank">
+    <img src="image/game2.jpg" alt="Gaming">
+   </a> 
+   <div class="hobby-text">
+      <p>
+        One of my favourite hobbies is playing games because it allows me to relax and take a break from my daily routine. 
+        Gaming not only helps me reduce stress and unwind after a long day, but it also improves my focus, problem-solving skills, and creativity. 
+        Through different types of games, I can challenge myself, explore new worlds, and even connect with friends who share the same interest.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- TREASURE SECTION -->
+<section id="treasure" class="section">
+  <h2>Things I Treasure the Most</h2>
+
+  <div class="treasure-item">
+    <a href="image/cat1.jpg" target="_blank">
+    <img src="image/cat1.jpg" alt="Omar the Cat">
+    </a>
+    <div>
+      <h3>Cat</h3>
+      <p>Cats bring comfort and calmness into my life.</p>
+    </div>
+  </div>
+
+  <div class="treasure-item reverse">
+    <a href="image/family.jpg" target="_blank">
+    <img src="image/family.jpg" alt="My beautiful family">
+   </a> 
+   <div class="treasure-text">
+      <h3>Family</h3>
+      <p>My family is my biggest support system.</p>
+    </div>
+  </div>
+
+  <div class="treasure-item">
+    <a href="image/coding.jpg" target="_blank">
+    <img src="image/coding.jpg" alt="One of my work">
+   </a> 
+   <div class="treasure-text">
+      <h3>Coding</h3>
+      <p>Coding allows me to express creativity and logic.</p>
+    </div>
+  </div>
+
+  <div class="treasure-item reverse">
+    <a href="image/friends.jpg" target="_blank">
+    <img src="image/friends.jpg" alt="My cutie friends">
+    </a>
+    <div class="treasure-text">
+      <h3>Friends</h3>
+      <p>Friends make my journey more meaningful.They bring laughter,support, and unforgettable memories.</p>
+    </div>
+  </div>
+
+  <div class="treasure-item">
+    <a href="image/food2.jpg" target="_blank">
+    <img src="image/food2.jpg" alt="Fave food">
+    </a>
+    <div class="treasure-text">
+      <h3>Delicious food</h3>
+      <p>Good food always makes me happy. Exploring different cuisines 
+        and enjoying delicious meals is one of my simple joys in life.</p>
+    </div>
+  </div>
+
+  <div class="treasure-item reverse">
+    <a href="image/beach1.jpg" target="_blank">
+    <img src="image/beach1.jpg" alt="pink sky in beach">
+    </a>
+    <div class="treasure-text">
+      <h3>Beach</h3>
+      <p>The beach is one of my favorite places to relax and unwind. 
+      Listening to the sound of waves, feeling the sea breeze, 
+      and watching the sunset give me peace and happiness.
+      </p>
+    </div>
+  </div>
+</section>
+
+<nav class="bottom-nav">
+  <a href="#profile">Profile</a>
+  <a href="#hobby">Hobby</a>
+  <a href="#treasure">Treasure</a>
+  <!-- tambah lagi kalau ada section lain -->
+</nav>
+
+</main>
+<!-- Music Player -->
+<div class="music-player">
+  <img src="image/multo.jpg" alt="Multo Cover" class="music-cover">
+  <div class="music-info">
+    <p class="music-title">Multo — Cup of Joe</p>
+    <button id="music-btn" onclick="toggleMusic()">▶️</button>
+  </div>
+  <audio id="bg-music" src="music/Multo - Cup of Joe (Official Lyric Video).mp3" loop></audio>
+</div>
+
+
+
+<!-- Footer -->
+<footer>
+  © 2026 Ain Asyikin. All rights reserved.
+</footer>
+<script>
+  const music = document.getElementById('bg-music');
+  const btn = document.getElementById('music-btn');
+
+  function toggleMusic() {
+    if (music.paused) {
+      music.play();
+      btn.textContent = '⏸️';
+    } else {
+      music.pause();
+      btn.textContent = '▶️';
+    }
+  }
+
+  // Auto play when page loads
+  window.addEventListener('load', () => {
+    music.play().then(() => {
+      btn.textContent = '⏸️'; // autoplay success
+    }).catch(() => {
+      btn.textContent = '▶️'; // autoplay blocked
+    });
+  });
+</script>
+</body>
+</html>

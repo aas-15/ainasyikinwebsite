@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Education</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+
+<nav class="top-nav">
+  <a href="index4.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="education.html" class="active">Education</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<header class="custom-header">
+  <div class="header-wrapper">
+    <div class="header-left" style="margin:auto; text-align:center;">
+      <h1 style="font-size: 60px;">My Education</h1>
+      <marquee><p>Click each level to explore my academic journey</p></marquee>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="edu-wrapper">
+
+    <div class="edu-block">
+      <div class="edu-summary" onclick="toggleEdu(0)">
+        <img src="image/uitm-logo.png" alt="UiTM">
+        <div>
+          <h3>Universiti Teknologi MARA (UiTM)</h3>
+          <span>Diploma in Information Management</span>
+        </div>
+      </div>
+      <div class="edu-details">
+        <p><strong>Year:</strong> 2023 – 2026</p>
+        <p>
+      <p>Learned records management, archives, information systems,
+  and basic web development. Throughout the program, I gained
+  strong knowledge in managing information lifecycle including
+  creation, classification, storage, retrieval, and disposal of records.
+  I was also exposed to information organization, database basics,
+  digital record management, and the importance of information
+  security and confidentiality. These experiences helped me develop
+  strong technical, analytical, and administrative skills applicable
+  in both academic and professional environments.
+</p>
+
+        </p>
+      </div>
+    </div>
+
+    <div class="edu-block">
+      <div class="edu-summary" onclick="toggleEdu(1)">
+        <img src="image/pdt-logo.png" alt="Internship">
+        <div>
+          <h3>Industrial Training</h3>
+          <span>Government Office Experience</span>
+        </div>
+      </div>
+      <div class="edu-details">
+        <p><strong>Organization:</strong> Pejabat Daerah / Tanah Kuala Langat</p>
+        <p><strong>Year:</strong> 2025</p>
+        <p>
+         Learned records management, archives, information systems,
+        and basic web development with a strong focus on information lifecycle management, digital records, data organization, and
+        information security, while developing technical and administrative skills.
+        </p>
+      </div>
+    </div>
+
+    <div class="edu-block">
+      <div class="edu-summary" onclick="toggleEdu(2)">
+        <img src="image/smkbb-logo.jpg" alt="School">
+        <div>
+          <h3>Secondary School</h3>
+          <span>Academic Foundation</span>
+        </div>
+      </div>
+      <div class="edu-details">
+        <p><strong>Year:</strong> 2018 – 2022</p>
+        <p>
+          Completed secondary education while building strong academic
+          foundation, communication skills, and teamwork.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="skill-section">
+  <h2>My Skills & Achievements</h2>
+
+  <table class="skill-table">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Details</th>
+        <th>Level / Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Technical Skills</td>
+        <td>HTML, CSS, Basic JavaScript, PHP, C++</td>
+        <td>Intermediate</td>
+      </tr>
+      <tr>
+        <td>Office Skills</td>
+        <td>Microsoft Word, Excel, PowerPoint</td>
+        <td>Advanced</td>
+      </tr>
+      <tr>
+        <td>Soft Skills</td>
+        <td>Teamwork, Communication, Time Management</td>
+        <td>Strong</td>
+      </tr>
+      <tr>
+        <td>Industrial Training</td>
+        <td>Data entry, record management, office administration</td>
+        <td>2025</td>
+      </tr>
+      <tr>
+        <td>Academic Achievement</td>
+        <td>Diploma in Information Management (UiTM)</td>
+        <td>2023 – 2026</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+</main>
+<!-- Music Player -->
+<div class="music-player">
+  <img src="image/multo.jpg" alt="Multo Cover" class="music-cover">
+  <div class="music-info">
+    <p class="music-title">Multo — Cup of Joe</p>
+    <button id="music-btn" onclick="toggleMusic()">▶️</button>
+  </div>
+  <audio id="bg-music" src="music/Multo - Cup of Joe (Official Lyric Video).mp3" loop></audio>
+</div>
+<footer>
+  © 2026 Ain Asyikin. All rights reserved.
+</footer>
+
+<script>
+  function toggleEdu(index) {
+    const details = document.querySelectorAll('.edu-details');
+    details.forEach((item, i) => {
+      if (i === index) {
+        item.classList.toggle('active');
+      } else {
+        item.classList.remove('active');
+      }
+    });
+  }
+</script>
+<script>
+  const music = document.getElementById('bg-music');
+  const btn = document.getElementById('music-btn');
+
+  function toggleMusic() {
+    if (music.paused) {
+      music.play();
+      btn.textContent = '⏸️';
+    } else {
+      music.pause();
+      btn.textContent = '▶️';
+    }
+  }
+
+  // Auto play when page loads
+  window.addEventListener('load', () => {
+    music.play().then(() => {
+      btn.textContent = '⏸️'; // autoplay success
+    }).catch(() => {
+      btn.textContent = '▶️'; // autoplay blocked
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Personal Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+
+<nav class="top-nav">
+  <a href="index4.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="education.html">Education</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<header class="custom-header">
+  <div class="header-wrapper">
+
+    <!-- LEFT -->
+    <div class="header-left">
+      <h1>WELCOME TO</h1>
+      <h1>MY PERSONAL WEBSITE</h1>
+
+      <p class="name-text">Hi, I’m Ain Asyikin</p>
+
+      <p class="desc-text">
+        A diploma student who is passionate about learning, creativity, and
+        personal development. This website is created to share my educational
+        journey, memorable moments, and personal background about my self.
+      </p>
+      <a href="about.html" class="btn-about">About Me</a>
+    </div> <!-- TAMBAH TUTUP header-left DI SINI -->
+
+    <!-- RIGHT -->
+    <div class="header-right">
+      <img src="image/my_picture.jpeg" alt="About Image" class="square-img">
+    </div>
+
+  </div> <!-- tutup header-wrapper -->
+</header>
+
+<section class="section">
+  <h2>HI NEW COMERS</h2>
+  <p>
+    Welcome to my personal website, a simple space to introduce who I am and what I am learning as an information management student in Malaysia. Here, you can explore my background, education, family, and a small gallery that reflects my learning journey.
+​  </p>
+<br>
+  <p>
+  This site is also part of my web development assignment, where I practise organizing information clearly and designing a clean, user-friendly layout. Feel free to look around and get to know me better through each page.
+  </p>
+</section>
+<!-- Music Player -->
+<div class="music-player">
+  <img src="image/multo.jpg" alt="Multo Cover" class="music-cover">
+  <div class="music-info">
+    <p class="music-title">Multo — Cup of Joe</p>
+    <button id="music-btn" onclick="toggleMusic()">▶️</button>
+  </div>
+  <audio id="bg-music" src="music/Multo - Cup of Joe (Official Lyric Video).mp3" loop></audio>
+</div>
+<footer>
+  © 2026 Ain Asyikin. All rights reserved.
+</footer>
+<script>
+  const music = document.getElementById('bg-music');
+  const btn = document.getElementById('music-btn');
+
+  function toggleMusic() {
+    if (music.paused) {
+      music.play();
+      btn.textContent = '⏸️';
+    } else {
+      music.pause();
+      btn.textContent = '▶️';
+    }
+  }
+
+  // Auto play when page loads
+  window.addEventListener('load', () => {
+    music.play().then(() => {
+      btn.textContent = '⏸️'; // autoplay success
+    }).catch(() => {
+      btn.textContent = '▶️'; // autoplay blocked
+    });
+  });
+</script>
+</body>
+</html>

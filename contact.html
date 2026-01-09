@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style4.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a href="index4.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="education.html">Education</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- Header -->
+<header class="custom-header">
+  <div class="header-wrapper">
+    <div class="header-left" style="margin:auto; text-align:center;">
+      <h1 style="font-size: 60px;">Contact Me</h1>
+    </div>
+  </div>
+</header>
+
+<section class="contact-card">
+  <h2>Get in Touch</h2>
+  <p>Feel free to reach out via any platform below:</p>
+  <div class="contact-icons">
+    <a href="mailto:aasyikina9966@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+    <a href="https://www.instagram.com/ainasyikin_a?igsh=OXowY2l5NWU3aDd6" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@syilovecats?_r=1&_t=ZS-92tkuz1lSuP" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="tel:+60133516015"><i class="fas fa-phone"></i></a>
+  </div>
+</section>
+
+<!-- Music Player -->
+<div class="music-player">
+  <img src="image/multo.jpg" alt="Multo Cover" class="music-cover">
+  <div class="music-info">
+    <p class="music-title">Multo — Cup of Joe</p>
+    <button id="music-btn" onclick="toggleMusic()">▶️</button>
+  </div>
+  <audio id="bg-music" src="music/Multo - Cup of Joe (Official Lyric Video).mp3" loop></audio>
+</div>
+
+
+<footer>
+  © 2026 Ain Asyikin
+</footer>
+<script>
+  const music = document.getElementById('bg-music');
+  const btn = document.getElementById('music-btn');
+
+  function toggleMusic() {
+    if (music.paused) {
+      music.play();
+      btn.textContent = '⏸️';
+    } else {
+      music.pause();
+      btn.textContent = '▶️';
+    }
+  }
+
+  // Auto play when page loads
+  window.addEventListener('load', () => {
+    music.play().then(() => {
+      btn.textContent = '⏸️'; // autoplay success
+    }).catch(() => {
+      btn.textContent = '▶️'; // autoplay blocked
+    });
+  });
+</script>
+</body>
+</html>
